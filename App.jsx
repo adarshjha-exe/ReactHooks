@@ -1,11 +1,12 @@
+import './styles.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import UseState2 from './ReactHooks/1-useState/UseState2';
+import UseStateWithObject3 from './ReactHooks/1-useState/UseStateWithObject3';
 
 const App = () => {
   return (
     <div>
-      <UseState2 />
+      <UseStateWithObject3 />
     </div>
   );
 };
