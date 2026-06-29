@@ -1,11 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import WhyUseState from './ReactHooks/1-useState/WhyUseState';
+import WhyUseState1 from './ReactHooks/1-useState/WhyUseState1';
 
 const App = () => {
   return (
     <div>
-      <WhyUseState />
+      <WhyUseState1 />
     </div>
   );
 };
