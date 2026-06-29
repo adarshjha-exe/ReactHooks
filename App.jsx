@@ -1,12 +1,12 @@
 import './styles.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import UseStateWithObject3 from './ReactHooks/1-useState/UseStateWithObject3';
+import MultipleSetFunc4 from './ReactHooks/1-useState/MultipleSetFunc4';
 
 const App = () => {
   return (
     <div>
-      <UseStateWithObject3 />
+      <MultipleSetFunc4 />
     </div>
   );
 };
