@@ -1,12 +1,12 @@
 import './styles.css';
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import MultipleSetFunc4 from './ReactHooks/1-useState/MultipleSetFunc4';
+import UseEffectHook from './ReactHooks/2-useEffect/UseEffectHook';
 
 const App = () => {
   return (
     <div>
-      <MultipleSetFunc4 />
+      <UseEffectHook />
     </div>
   );
 };
