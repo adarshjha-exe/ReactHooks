@@ -1,4 +1,46 @@
 * {
   font-size: 120%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.light-mode,
+.dark-mode {
+  min-height: 100vh;
+  padding: 2rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.light-mode {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.dark-mode {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.dark-mode button {
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+.light-mode button {
+  background-color: #111827;
+  color: #f9fafb;
 }
