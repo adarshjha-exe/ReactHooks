@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { findNthPrime } from './nthPrime.js';
 
 const UseMemoComp = () => {
@@ -7,11 +7,12 @@ const UseMemoComp = () => {
 
   console.log('rendering the component every time input text changes.....');
 
-  // Heavy operation - After 6 digit UI freeze
-  const prime = () => {
-    console.log('Prime Number rendering...');
-    return findNthPrime(text);
-  };
+  // Heavy operation -> After 6 digit UI freeze
+  // findNthPrime return the prime, and we need to memoize this
+  // useMemo takes 2 params : 1: function that returns the value to memoize, 2: array of dependencies
+  // Now prime having have the cached value of findNthPrime(text), prime is now not a function, but a memoized value
+  // here 2nd parameter is dependencies array, means sometimes we need not to cache it, it means memoize it and only change when my dependencies change here (text) changes.
+  const prime = useMemo(() => findNthPrime(text), [text]);
 
   return (
     <div className={isDarkMode ? 'dark-mode' : 'light-mode'}>
@@ -24,7 +25,7 @@ const UseMemoComp = () => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <h1>Prime Num : {prime()}</h1>
+      <h1>Prime Num : {prime}</h1>
     </div>
   );
 };
